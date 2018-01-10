@@ -1,9 +1,10 @@
 {
   "name": "proto",
   "version": "0.0.1",
-  "description": "Vanilla prototyping tool",
+  "description": "Vanilla Web prototyping tool",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon --watch webpack.config.js --exec webpack-dev-server",
     "build": "webpack"
   },
   "repository": {
@@ -18,6 +19,8 @@
   "homepage": "https://github.com/juanmnl/proto#readme",
   "devDependencies": {
     "html-webpack-plugin": "^2.30.1",
-    "webpack": "^3.10.0"
+    "nodemon": "^1.14.10",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
   }
 }

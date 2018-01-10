@@ -18,5 +18,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Proto'
     })
-  ]
+  ],
+
+  devServer: {
+    stats: 'errors-only',
+    host: process.env.HOST,
+    port: process.env.PORT,
+    overlay: {
+      errors: true,
+      warnings: true
+    }
+  }
 };
