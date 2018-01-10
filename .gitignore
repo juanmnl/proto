@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# structure
+dist/
+build/
+
+.DS_Store
