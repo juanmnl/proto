@@ -22,7 +22,8 @@ const commonConfig = merge([
         title: 'Proto'
       })
     ]
-  }
+  },
+  parts.loadCSS()
 ]);
 
 const productionConfig = merge([]);

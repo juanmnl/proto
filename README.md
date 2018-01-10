@@ -1,5 +1,6 @@
 ## Vanilla Web Prototyping tool
 
+* Nodemon
 * Webpack
-* Scss
 * PostCSS
+  * CSSnext

@@ -4,8 +4,7 @@
   "description": "Vanilla Web prototyping tool",
   "main": "index.js",
   "scripts": {
-    "start":
-      "nodemon --watch webpack.config.js --exec webpack-dev-server --env development",
+    "start": "nodemon --watch webpack.config.js --exec webpack-dev-server --env development",
     "build": "webpack --env production"
   },
   "repository": {
@@ -19,8 +18,12 @@
   },
   "homepage": "https://github.com/juanmnl/proto#readme",
   "devDependencies": {
+    "css-loader": "^0.28.8",
     "html-webpack-plugin": "^2.30.1",
     "nodemon": "^1.14.10",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-loader": "^2.0.10",
+    "style-loader": "^0.19.1",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.10.1",
     "webpack-merge": "^4.1.1"

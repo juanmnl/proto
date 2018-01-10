@@ -1,5 +1,13 @@
+:root {
+  --coral: coral;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
+}
+
+body {
+  background: var(--coral);
 }
