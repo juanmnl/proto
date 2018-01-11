@@ -36,6 +36,12 @@ const productionConfig = merge([
         }
       }
     ]
+  }),
+  parts.loadImages({
+    options: {
+      limit: 15000,
+      name: '[name].[ext]'
+    }
   })
 ]);
 
@@ -44,7 +50,8 @@ const developmentConfig = merge([
     host: process.env.HOST,
     port: process.env.PORT
   }),
-  parts.loadCSS()
+  parts.loadCSS(),
+  parts.loadImages()
 ]);
 
 module.exports = env => {

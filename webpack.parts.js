@@ -56,3 +56,19 @@ exports.extractCSS = ({ include, exclude, use } = {}) => {
     plugins: [plugin]
   };
 };
+
+exports.loadImages = ({ include, exclude, options } = {}) => ({
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpeg|jpg|svg)$/,
+        include,
+        exclude,
+        use: {
+          loader: 'url-loader',
+          options
+        }
+      }
+    ]
+  }
+});
