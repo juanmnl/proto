@@ -9,6 +9,13 @@ const PATHS = {
 };
 
 const commonConfig = merge([
+  // {
+  //   performance: {
+  //     hints: 'warning',
+  //     maxEntrypointSize: 50000,
+  //     maxAssetSize: 450000
+  //   }
+  // },
   {
     entry: {
       app: PATHS.app
@@ -44,7 +51,15 @@ const productionConfig = merge([
       name: '[name].[ext]'
     }
   }),
-  parts.generateSourceMaps({ type: 'source-map' })
+  parts.minifyJS(),
+  parts.minifyJS({
+    options: {
+      discardComments: {
+        removeAll: true
+      },
+      safe: true
+    }
+  })
 ]);
 
 const developmentConfig = merge([

@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch webpack.config.js --exec webpack-dev-server --env development",
-    "clean:build": "rm -rf build/",
-    "build": "webpack --env production"
+    "build": "rm -rf build/ && webpack --env production"
   },
   "repository": {
     "type": "git",
@@ -23,13 +22,16 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "css-loader": "^0.28.8",
+    "cssnano": "^3.10.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
     "html-webpack-plugin": "^2.30.1",
     "nodemon": "^1.14.10",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
     "postcss-cssnext": "^3.0.2",
     "postcss-loader": "^2.0.10",
     "style-loader": "^0.19.1",
+    "uglifyjs-webpack-plugin": "^1.1.6",
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.10.1",

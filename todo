@@ -1,3 +1,4 @@
 - Purify CSS
 - Optimize SVG load
 - Add image optimization on build pipeline
+- Re-enable webpack perf warnings w/code spliting
