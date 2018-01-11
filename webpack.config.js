@@ -22,17 +22,29 @@ const commonConfig = merge([
         title: 'Proto'
       })
     ]
-  },
-  parts.loadCSS()
+  }
 ]);
 
-const productionConfig = merge([]);
+const productionConfig = merge([
+  parts.extractCSS({
+    use: [
+      'css-loader',
+      {
+        loader: 'postcss-loader',
+        options: {
+          plugins: () => [require('postcss-cssnext')()]
+        }
+      }
+    ]
+  })
+]);
 
 const developmentConfig = merge([
   parts.devServer({
     host: process.env.HOST,
     port: process.env.PORT
-  })
+  }),
+  parts.loadCSS()
 ]);
 
 module.exports = env => {
