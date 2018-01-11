@@ -43,7 +43,8 @@ const productionConfig = merge([
       limit: 15000,
       name: '[name].[ext]'
     }
-  })
+  }),
+  parts.generateSourceMaps({ type: 'source-map' })
 ]);
 
 const developmentConfig = merge([
