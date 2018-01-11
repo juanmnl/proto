@@ -37,7 +37,7 @@ exports.loadCSS = ({ include, exclude } = {}) => ({
 exports.extractCSS = ({ include, exclude, use } = {}) => {
   const plugin = new ExtractTextPlugin({
     allChunks: true,
-    filename: '[name].css'
+    filename: 'styles/[name].css'
   });
   return {
     module: {
