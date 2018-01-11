@@ -12,6 +12,19 @@ exports.devServer = ({ host, port } = {}) => ({
   }
 });
 
+exports.loadJS = ({ include, exclude } = {}) => ({
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        include,
+        exclude,
+        use: 'babel-loader'
+      }
+    ]
+  }
+});
+
 exports.loadCSS = ({ include, exclude } = {}) => ({
   module: {
     rules: [

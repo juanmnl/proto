@@ -22,7 +22,8 @@ const commonConfig = merge([
         title: 'Proto'
       })
     ]
-  }
+  },
+  parts.loadJS({ include: PATHS.app })
 ]);
 
 const productionConfig = merge([
