@@ -2,5 +2,6 @@
 
 * Nodemon
 * Webpack
+* Babel
 * PostCSS
   * CSSnext

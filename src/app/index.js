@@ -1,7 +1,11 @@
 import './app.css';
 import component from './component';
 
-const test = document.createElement('span');
+const header = document.querySelector('header');
+const article = document.getElementsByTagName('article')[0];
+const logo = document.getElementById('wolf');
 
-document.body.appendChild(component());
-document.body.appendChild(test);
+let wolf = require('./../public/assets/wolfang.svg');
+
+header.appendChild(component());
+logo.innerHTML = `<img src="${wolf}" alt="">`;

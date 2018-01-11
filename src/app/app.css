@@ -1,25 +1,98 @@
 :root {
-  --coral: coral;
+  --bg: #fff;
   --padding: 1em;
+  font-size: 17px;
 }
 
-html,
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+}
+
+html {
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
+  height: 100vh;
+  background: var(--bg);
+  padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: larger;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 5;
+}
+
+article p {
+  font-weight: 600;
+}
+
+ol,
+ul {
+  font-size: 0.8em;
   padding: 0;
 }
 
-body {
-  background: var(--coral);
-  padding: var(--padding);
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+footer {
+  text-align: center;
+  font-weight: 900;
 }
 
-span {
-  width: 180px;
-  height: 130px;
-  display: inline-block;
-  background: url('./../public/assets/wolfang.svg') no-repeat;
+footer a {
+  color: black;
+  text-decoration: none;
+}
+
+pre {
+  height: 50px;
+  line-height: 30px;
+  clear: both;
+  background-color: #f7f7f7;
+  white-space: pre-wrap;
+  margin: 0 0 1em 0;
+  color: #222;
+  padding: 8px 10px;
+  border-radius: 0.4em;
+  overflow-x: auto;
+  display: block;
+  white-space: pre;
+}
+
+pre > code {
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 0.8em;
+}
+
+.blink {
+  animation: blink 0.2s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

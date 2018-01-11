@@ -26,7 +26,9 @@ const commonConfig = merge([
     },
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'Proto'
+        template: './src/public/index.html',
+        title: 'Proto - Vanilla Web Prototyping tool',
+        favicon: './src/public/assets/favicon.ico'
       })
     ]
   },
@@ -48,7 +50,7 @@ const productionConfig = merge([
   parts.loadImages({
     options: {
       limit: 15000,
-      name: '[name].[ext]'
+      name: 'assets/[name].[ext]'
     }
   }),
   parts.minifyJS(),
