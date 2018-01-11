@@ -2,3 +2,6 @@
 - Optimize SVG load
 - Add image optimization on build pipeline
 - Re-enable webpack perf warnings w/code spliting
+- set chunk files and hash names for cache
+- set build analyzer
+- add multi-page setup
