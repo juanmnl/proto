@@ -7,6 +7,7 @@
 * Babel
 * PostCSS
   * CSSnext
+* Faker.js (design with data)
 
 **\*How to use it?**
 

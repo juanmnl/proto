@@ -4,6 +4,7 @@
   font-size: 17px;
 }
 
+/* BASE CSS */
 * {
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
@@ -27,6 +28,8 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/* BOILERPLATE CSS */
 
 h1 {
   font-family: 'Monaco', 'Menlo', monospace;
