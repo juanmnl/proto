@@ -4,6 +4,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const cssnano = require('cssnano');
 
 exports.devServer = ({ host, port } = {}) => ({
+  mode: 'development',
   devServer: {
     stats: 'errors-only',
     host,
